@@ -4,8 +4,8 @@ module.exports = function (shipit) {
 
   shipit.initConfig({
     default: {
-      workspace: '/tmp/fetchsy-api',
-      deployTo: '/var/www/fetchsy-api',
+      workspace: '/tmp/puregympresence',
+      deployTo: '/var/www/puregympresence',
       repositoryUrl: 'git@github.com:jegtnes/PureGymPresence.git',
       ignores: ['.git', 'node_modules'],
       rsync: ['--del'],
