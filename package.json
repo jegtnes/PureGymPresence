@@ -20,8 +20,7 @@
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "mongoose": "^4.4.13",
-    "scraperjs": "^1.2.0",
-    "spooky": "^0.2.5"
+    "scraperjs": "^1.2.0"
   },
   "devDependencies": {
     "shipit-cli": "^1.4.1",
