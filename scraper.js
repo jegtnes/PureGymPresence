@@ -2,7 +2,7 @@ var scraperjs = require('scraperjs');
 
 var Gym = require('./models/gym');
 
-module.exports = function() {
+module.exports = function(req, res) {
   scraperjs.StaticScraper.create('http://www.puregym.com/gyms/bristol-harbourside/whats-happening/')
     .scrape(function($) {
       return $(".people-number").map(function() {
@@ -25,6 +25,11 @@ module.exports = function() {
             if (err) {
               console.log('shitehawk');
               console.log(err);
+              return res.status(500).send(err);
+            }
+            else {
+              console.log(number[0]);
+              return res.send({patrons: number[0]});
             }
           })
         }
